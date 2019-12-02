@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Login</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <style>
+            .card {
+                margin: auto;
+                margin-top: 300px;
+                height: 350px;
+                width: 500px
+            }
+
+            body {
+                /*background: #262626;*/
+                background-image: url('../image/padi.jpg')
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="card-header">
+                <strong><h4>Login</h4></strong>
+            </div>
+            <div class="card-body">
+                <form action="#" th:action="@{/login}" method="POST">
+                    <div class="form-group">
+                        <label th:for="username">Email address:</label>
+                        <input type="String" name="username" class="form-control">                        
+                    </div>
+                    <div class="form-group">
+                        <label th:for="pwd">Password:</label>
+                        <input type="password"  name="password" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

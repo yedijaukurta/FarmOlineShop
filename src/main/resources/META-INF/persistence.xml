@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="assetmanagement_assetmanagement_jar_0.0.1-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>assetmanagement.assetmanagement.entities.TbMSalesOrder</class>
+    <class>assetmanagement.assetmanagement.entities.TbMAssetItemType</class>
+    <class>assetmanagement.assetmanagement.entities.TbMAssetItem</class>
+    <class>assetmanagement.assetmanagement.entities.TbMUser</class>
+    <class>assetmanagement.assetmanagement.entities.TbMRole</class>
+    <class>assetmanagement.assetmanagement.entities.TbMParameter</class>
+    <class>assetmanagement.assetmanagement.entities.TbMAssetType</class>
+    <class>assetmanagement.assetmanagement.entities.TbMCategory</class>
+    <class>assetmanagement.assetmanagement.entities.TbMAssetSalesOrder</class>
+    <class>assetmanagement.assetmanagement.entities.TbMBrand</class>
+    <class>assetmanagement.assetmanagement.entities.TbMStatus</class>
+    <class>assetmanagement.assetmanagement.entities.TbMAsset</class>
+    <class>assetmanagement.assetmanagement.entities.TbTrUserRole</class>
+    <class>assetmanagement.assetmanagement.entities.TbMApplication</class>
+    <class>assetmanagement.assetmanagement.entities.TbMUserType</class>
+    <class>assetmanagement.assetmanagement.entities.TbTrGroupPart</class>
+    <class>assetmanagement.assetmanagement.entities.TbMPart</class>
+    <class>assetmanagement.assetmanagement.entities.TbMGroup</class>
+    <class>assetmanagement.assetmanagement.entities.TbMTypeProject</class>
+    <class>assetmanagement.assetmanagement.entities.TbTrDetailMaintenancePart</class>
+    <class>assetmanagement.assetmanagement.entities.TbTrMaintenance</class>
+    <class>assetmanagement.assetmanagement.entities.TbMMaintenanceType</class>
+    <class>assetmanagement.assetmanagement.entities.TbTrPartType</class>
+    <class>assetmanagement.assetmanagement.entities.TbTrAssetPart</class>
+    <class>assetmanagement.assetmanagement.entities.TbMTransactionType</class>
+    <class>assetmanagement.assetmanagement.entities.TbMMaintenanceStatus</class>
+    <class>assetmanagement.assetmanagement.entities.TbMLog</class>
+    <class>assetmanagement.assetmanagement.entities.TbTrAssetAllocationDetail</class>
+    <class>assetmanagement.assetmanagement.entities.TbTrDetailMaintenance</class>
+    <class>assetmanagement.assetmanagement.entities.TbTrAssetAllocation</class>
+    <class>assetmanagement.assetmanagement.entities.Farmers</class>
+    <class>assetmanagement.assetmanagement.entities.FarmersCrops</class>
+    <class>assetmanagement.assetmanagement.entities.Crops</class>
+    <class>assetmanagement.assetmanagement.entities.SoldCrops</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/db_asset_management?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+    </properties>
+  </persistence-unit>
+</persistence>

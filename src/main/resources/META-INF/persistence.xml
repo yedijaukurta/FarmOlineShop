@@ -36,6 +36,9 @@
     <class>assetmanagement.assetmanagement.entities.FarmersCrops</class>
     <class>assetmanagement.assetmanagement.entities.Crops</class>
     <class>assetmanagement.assetmanagement.entities.SoldCrops</class>
+    <class>assetmanagement.assetmanagement.entities.Pelanggan</class>
+    <class>assetmanagement.assetmanagement.entities.Tbpelanggan</class>
+    <class>assetmanagement.assetmanagement.entities.Pelanggann</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/db_asset_management?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

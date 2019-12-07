@@ -48,7 +48,7 @@
                     <div class="card-header">
                         <strong>
                             <h4>
-                                Manage Farmers
+                                Kelola Petani
                             </h4>
                         </strong>
                     </div>
@@ -56,19 +56,19 @@
                         <form method='POST' th:action='@{/savefarmers}'>
                             <div class="row">
                                 <div class="col-3 offset-1">
-                                    <label for="">Edit Phone Number</label>
+                                    <label for=""> Nomor Handpone </label>
                                     <input type='text' id='phoneNumber' name='phoneNumber' class="form-control">
                                 </div>
                                 <div class="col-3">
-                                    <label for="">Edit Farmers</label>
+                                    <label for="">Nama Petani </label>
                                     <input type='text' name='name' id='name' class="form-control">
                                 </div>
                                 <div class="col-3"> 
-                                    <label for="">Edit Address</label>
+                                    <label for=""> Alamat </label>
                                     <input type='textarea' name='address' id='address' class="form-control">
                                 </div>
                                 <div class="col-2">
-                                    <input type='submit' value="Submit" class="btn btn-dark" style="margin-top: 30px">
+                                    <input type='submit' value="Masukkan/Update" class="btn btn-dark" style="margin-top: 30px">
                                 </div>
                             </div>
                         </form>
@@ -76,9 +76,9 @@
                         <table class="table table-bordered table-striped text-center">
                             <thead>
                                 <tr>
-                                    <th>Phone Number</th>
-                                    <th>Farmers</th>
-                                    <th>Address</th>
+                                    <th>Nomor Handphone</th>
+                                    <th>Petani</th>
+                                    <th>Alamat</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>

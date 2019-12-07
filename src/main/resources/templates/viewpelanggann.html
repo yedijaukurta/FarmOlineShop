@@ -48,60 +48,23 @@
                     <div class="card-header">
                         <strong>
                             <h4>
-                                Kelola Hasil Panen Petani
+                                Manage Farmers
                             </h4>
                         </strong>
                     </div>
                     <div class="card-body">
-                        <form method='POST' th:action='@{/savefarmerscrops}'>
-                            <div class="row">
-                                <div class="col-3 offset-1">
-                                    <label for="">ID</label>
-                                    <select name='farmers' id='farmers' class="form-control">
-                                        <option th:each='farmer: ${farmers}' th:value='${farmer.phoneNumber}' th:text='${farmer.phoneNumber + " - " + farmer.name}'></option>
-                                    </select>
-                                </div>
-                                <div class="col-2">
-                                    <label for="">Hasil Panen</label>
-                                    <select name='crops' id='crops' class="form-control">
-                                        <option th:each='crop: ${crops}' th:value=${crop.id} th:text='${crop.name}'></option>
-                                    </select>
-                                </div>
-                                <input type='hidden' name="id" id='id' class="form-control">
-                                <div class="col-2">
-                                    <label for="">Kuantitas (/kg)</label>
-                                    <input type='number' name="quantity" id='quantity' class="form-control">
-                                </div>
-                                <div class="col-2">
-                                    <label for="">Harga (/kg)</label>
-                                    <input type='number' name="price" id='price' class="form-control">                                    
-                                </div>
-                                <div class="col-2" style="margin-top: 30px">
-                                    <input type='submit' value="Jual" class="btn btn-dark">                                    
-                                </div>
-                            </div>
-                        </form>
-                        <br>
                         <table class="table table-bordered table-striped text-center">
                             <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Petani</th>
-                                    <th>Hasil Panen</th>
-                                    <th>Kuantitas (/kg)</th>
-                                    <th>Harga (/kg)</th>
-                                    <th>Action</th>
+                                    <th>Nama</th>
+                                   
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr th:each="farmerCrop: ${farmersCrops}">
-                                    <td th:text="${farmerCrop.id}"></td>
-                                    <td th:text="${farmerCrop.farmers.name}"></td>
-                                    <td th:text="${farmerCrop.crops.name}"></td>
-                                    <td th:text="${farmerCrop.quantity}"></td>
-                                    <td th:text="${farmerCrop.price}"></td>
-                                    <td><button th:attr="onclick='javascript: myFunction(\'' + ${farmerCrop.id} +'\', \'' + ${farmerCrop.farmers.phoneNumber} +'\', \'' + ${farmerCrop.crops.id} +'\', \'' + ${farmerCrop.quantity} +'\', \'' + ${farmerCrop.price} +'\')'" class="btn btn-info">Edit</button>
-                                        <a th:href="${'/deletefarmerscrops/' + farmerCrop.id}" class="btn btn-danger">Delete</a></td>
+                                <tr th:each="pelanggann: ${pelanggann}">
+                                    <td th:text="${pelanggann.id}"></td>
+                                    <td th:text="${pelanggann.nama}"></td>
                                 </tr>
                             </tbody>
                         </table>                        
@@ -127,12 +90,10 @@
         });
     </script>
     <script>
-        function myFunction(id, farmer, crop, quantity, price) {
-            document.getElementById("farmers").value = farmer;
-            document.getElementById("crops").value = crop;
-            document.getElementById("quantity").value = quantity;
-            document.getElementById("id").value = id;
-            document.getElementById("price").value = price;
+        function myFunction(phoneNumber, address, name) {
+            document.getElementById("phoneNumber").value = phoneNumber;
+            document.getElementById("address").value = address;
+            document.getElementById("name").value = name;
         }
     </script>
 </body>

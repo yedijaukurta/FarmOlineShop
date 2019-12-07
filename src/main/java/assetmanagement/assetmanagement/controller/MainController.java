@@ -12,6 +12,8 @@ import assetmanagement.assetmanagement.entities.SoldCrops;
 import assetmanagement.assetmanagement.services.CropsService;
 import assetmanagement.assetmanagement.services.FarmersCropsService;
 import assetmanagement.assetmanagement.services.FarmersService;
+import assetmanagement.assetmanagement.services.PelangganService;
+import assetmanagement.assetmanagement.services.PelanggannService;
 import assetmanagement.assetmanagement.services.SoldCropsService;
 import java.io.IOException;
 import java.text.ParseException;
@@ -43,6 +45,10 @@ public class MainController {
     FarmersCropsService fc;
     @Autowired
     FarmersService f;
+    @Autowired
+    PelangganService p;
+    @Autowired
+    PelanggannService ps;
 
     private String username = "";
 
@@ -141,6 +147,24 @@ public class MainController {
         if (username.equals("admin")) {
             model.addAttribute("soldCrops", sc.getAll());
             return "viewsoldcrops";
+        }
+        return "redirect:/";
+    }
+    
+    @RequestMapping("/viewpelanggan")
+    public String viewPelanggan(Model model) {
+        if (username.equals("admin")) {
+            model.addAttribute("pelanggan", p.getAll());
+            return "viewpelanggan";
+        }
+        return "redirect:/";
+    }
+    
+        @RequestMapping("/viewpelanggann")
+    public String viewPelanggann(Model model) {
+        if (username.equals("admin")) {
+            model.addAttribute("pelanggann", ps.getAll());
+            return "viewpelanggann";
         }
         return "redirect:/";
     }

@@ -54,7 +54,7 @@
                 <div class="card">
                     <div class="card-header">
                         <strong>
-                            <h4>Buy Crops</h4>
+                            <h4>Hasil Panen Dijual</h4>
                         </strong>
                     </div>
                     <div class="card-body">
@@ -62,10 +62,10 @@
                             <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Farmers</th>
-                                    <th>Crops</th>
-                                    <th>Quantity</th>
-                                    <th>Price (/KG)</th>
+                                    <th>Petani</th>
+                                    <th>Hasil Panen</th>
+                                    <th>Kuantitas (/kg)</th>
+                                    <th>Harga (/kg)</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -76,22 +76,22 @@
                                     <td th:text="${farmerCrop.crops.name}"></td>
                                     <td th:text="${farmerCrop.quantity}"></td>
                                     <td th:text="${farmerCrop.price}"></td>
-                                    <td><button class="btn btn-info" th:attr="onclick='javascript: myFunction(\'' + ${farmerCrop.id} +'\')'">Buy</button></td>
+                                    <td><button class="btn btn-info" th:attr="onclick='javascript: myFunction(\'' + ${farmerCrop.id} +'\')'">Beli</button></td>
                                 </tr>
                             </tbody>
                         </table>
 
                         <form method='POST' th:action='@{/savesoldcrops}'>
                             <div class="form-group">
-                                <label for="">ID Farmer Crops</label>
+                                <label for="">ID Hasil Panen Petani</label>
                                 <input type="text" id="farmersCrops" name="farmersCrops" class="form-control">                        
                             </div>
                             <div class="form-group">
-                                <label for="">Quanty</label>
+                                <label for="">Kuantitas</label>
                                 <input type="number" id="quantity" name="quantity" class="form-control">
                             </div>
                             <div>
-                                <input type='submit' value="Submit" class="btn btn-dark float-right">                       
+                                <input type='submit' value="Beli" class="btn btn-dark float-right">                       
                             </div>
                         </form>
                     </div>
